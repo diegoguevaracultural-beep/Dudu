@@ -12,7 +12,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Georgia',serif;
+font-family:Georgia,serif;
 }
 
 body{
@@ -22,167 +22,204 @@ display:flex;
 justify-content:center;
 align-items:center;
 overflow:hidden;
-background:linear-gradient(#040814,#081327,#020308);
+
+background:linear-gradient(#030712,#0b1830,#020205);
 
 }
 
-/* ---------- ESTRELLAS ----------- */
 
-.stars{
-position:fixed;
-width:100%;
-height:100%;
-overflow:hidden;
-z-index:-2;
-}
+/* ESTRELLAS */
 
 .star{
 
 position:absolute;
 background:white;
 border-radius:50%;
-animation:twinkle 3s infinite;
+animation:brillo 3s infinite;
 
 }
 
-@keyframes twinkle{
+@keyframes brillo{
 
-0%{opacity:.2;}
-50%{opacity:1;}
-100%{opacity:.2;}
+50%{
+opacity:1;
+}
+
+100%{
+opacity:.2;
+}
 
 }
 
-/* ---------- SOBRE ----------- */
+
+/* CONTENEDOR */
 
 .container{
 
-perspective:1500px;
+perspective:1200px;
 
 }
+
+
+/* SOBRE */
 
 .envelope{
 
-width:340px;
-height:220px;
+width:350px;
+height:230px;
 position:relative;
 cursor:pointer;
-transition:.8s;
-overflow:hidden;
 
 }
 
-.front{
+
+/* PARTE DEL SOBRE */
+
+.body-envelope{
 
 position:absolute;
 width:100%;
 height:100%;
-background:#1b1b1b;
-border:2px solid #b9963b;
-border-radius:12px;
-overflow:hidden;
+
+background:#161616;
+
+border:3px solid #d4af37;
+border-radius:15px;
+
 box-shadow:
-0 0 20px rgba(255,215,120,.3),
-0 0 50px rgba(255,215,120,.1);
+0 0 25px rgba(212,175,55,.5);
+
+overflow:hidden;
 
 }
 
-/* Solapa */
+
+/* SOLAPA */
 
 .flap{
 
 position:absolute;
+
 width:100%;
 height:100%;
-background:linear-gradient(145deg,#c9a54d,#8d6a22);
+
+background:linear-gradient(140deg,#e8c76a,#9b7318);
+
 clip-path:polygon(0 0,100% 0,50% 60%);
+
 transform-origin:top;
+
 transition:1s;
 
+z-index:3;
+
 }
 
-/* Sello */
 
-.seal{
+/* CORAZON */
+
+.heart{
 
 position:absolute;
-width:70px;
-height:70px;
-background:radial-gradient(circle,#ffd76c,#b88919);
-border-radius:50%;
+
 top:95px;
-left:135px;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:32px;
-color:#fff;
-box-shadow:0 0 20px gold;
+left:140px;
+
+font-size:35px;
+
+z-index:4;
 
 }
+
 
 /* CARTA */
 
 .letter{
 
 position:absolute;
-width:310px;
-height:420px;
-background:#fffdf7;
+
+width:320px;
+height:430px;
+
 left:15px;
-bottom:-420px;
-border-radius:12px;
-padding:28px;
 
-transition:1.2s;
-overflow:auto;
+top:20px;
 
-box-shadow:
-0 10px 40px rgba(0,0,0,.4);
+background:#fffdf5;
 
-border:4px solid #d8b75d;
+border:4px solid #d4af37;
+
+border-radius:15px;
+
+padding:25px;
+
+z-index:1;
+
+transform:translateY(0);
+
+transition:1.3s;
+
+opacity:0;
 
 }
+
 
 .letter h1{
 
 text-align:center;
-color:#9b6a00;
-margin-bottom:18px;
+
+color:#b8860b;
+
+margin-bottom:20px;
 
 }
 
+
 .letter p{
 
-font-size:18px;
-line-height:1.8;
+font-size:17px;
+
+line-height:1.7;
+
 color:#444;
+
 text-align:justify;
 
 }
 
-.signature{
-
-margin-top:30px;
-text-align:right;
-font-style:italic;
-font-size:22px;
-color:#a07400;
-
-}
 
 /* GIF */
 
 .gif{
 
-display:none;
-margin:auto;
-margin-top:25px;
-width:170px;
+width:160px;
+
+display:block;
+
+margin:20px auto;
+
 border-radius:15px;
+
 box-shadow:0 0 20px gold;
 
 }
+
+
+/* FIRMA */
+
+.signature{
+
+text-align:right;
+
+font-style:italic;
+
+color:#b8860b;
+
+margin-top:20px;
+
+}
+
+
 
 /* ABIERTO */
 
@@ -192,89 +229,101 @@ transform:rotateX(180deg);
 
 }
 
+
 .open .letter{
 
-bottom:-180px;
+transform:translateY(-250px);
+
+opacity:1;
 
 }
 
-.open .gif{
-
-display:block;
-
-}
-
-.gold{
-
-color:#b8860b;
-font-weight:bold;
-
-}
 
 </style>
 
 </head>
 
+
 <body>
 
-<div class="stars" id="stars"></div>
+
+<div id="stars"></div>
+
 
 <div class="container">
 
+
 <div class="envelope" id="envelope">
 
-<div class="front">
-<div class="flap"></div>
-
-<div class="seal">
-❤
-</div>
-
-</div>
 
 <div class="letter">
 
-<h1>Para Ti ✨</h1>
+
+<h1>
+Para Isolde, mi amor 
+</h1>
+
 
 <p>
 
-Felices cuatro meses juntos mi amor, se que no estoy a tu lado 
-pero la distancia no borra lo que siento por ti, lo intensifica
-hace mas fuerte mi amor por ti.
+Felices cuatro meses juntos mi amor ❤️
 
-<br><br>
+Sé que a veces la distancia nos separa,
+pero jamás podrá separar lo que siento por ti.
 
-Pronto nos veremos y te llenare de besos mi amorcito preciosa
-te amo mucho, nunca lo olvides, perdon si a veces te hago 
-enojar, no es mi intencion.
+La distancia solo intensifica lo que siento por
+ti, por la felicidad que me genera ver tu sonrisa
 
-<br><br>
+Por cada dia abrazarte, acompañarte, adorarte, y 
+llenarte de besos y recordarte cuánto te amo.
 
-Gracias por existir, por ser parte de tantos momentos
-bonitos y por hacer que incluso los dias más dificiles
-se sientan maravillosos a tu lado.
+Te amo mi amorcito Isolde.
 
 </p>
 
+
 <img src="bubu-dudu-kisses.gif" class="gif">
 
+
 <div class="signature">
-Con mucho cariño Dieguin alias tu AMORCITOOO❤️
+
+Con mucho cariño ❤️
+
+Dieguin tu amorcitoo
+
 </div>
+
+
+</div>
+
+
+
+<div class="body-envelope">
+
+<div class="flap"></div>
+
+<div class="heart">
+
+❤️
 
 </div>
 
 </div>
 
+
 </div>
+
+
+</div>
+
+
 
 <script>
 
-/* ESTRELLAS */
 
-const stars=document.getElementById("stars");
+// ESTRELLAS
 
-for(let i=0;i<180;i++){
+for(let i=0;i<150;i++){
 
 let star=document.createElement("div");
 
@@ -288,23 +337,28 @@ star.style.height=size+"px";
 star.style.left=Math.random()*100+"%";
 star.style.top=Math.random()*100+"%";
 
-star.style.animationDelay=Math.random()*4+"s";
+star.style.animationDelay=Math.random()*3+"s";
 
-stars.appendChild(star);
+document.body.appendChild(star);
 
 }
 
-/* ABRIR SOBRE */
 
-const envelope=document.getElementById("envelope");
 
-envelope.onclick=()=>{
+// ABRIR
+
+let envelope=document.getElementById("envelope");
+
+
+envelope.onclick=function(){
 
 envelope.classList.toggle("open");
 
 }
 
+
 </script>
+
 
 </body>
 </html>
