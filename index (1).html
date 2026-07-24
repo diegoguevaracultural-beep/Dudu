@@ -1,0 +1,21 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>4 meses</title><style>
+body{margin:0;font-family:Arial;background:linear-gradient(#081423,#18324f);color:#fff;display:flex;align-items:center;justify-content:center;min-height:100vh;overflow:hidden}
+.star{position:absolute;width:2px;height:2px;background:#fff;animation:tw 2s infinite alternate}
+@keyframes tw{from{opacity:.2}to{opacity:1}}
+#env{background:#e8dcc0;color:#10243d;padding:20px 30px;border-radius:12px;cursor:pointer;box-shadow:0 10px 30px #0007}
+#card{display:none;max-width:700px;background:#ffffff12;backdrop-filter:blur(8px);padding:30px;border-radius:20px}
+img{max-width:280px;display:block;margin:20px auto}
+h1{color:#f3df9b;text-align:center}
+</style></head><body>
+<div id='env' onclick="this.style.display='none';document.getElementById('card').style.display='block'">💌 Haz clic para abrir la carta, mi amorcito Isolde</div>
+<div id='card'>
+<h1>Felices 4 meses 🤍</h1>
+<img src="assets/bubu-dudu-kisses.gif" alt="Dudu y Bubu">
+<p>Mi amorcito Isolde:<br><br>
+Gracias por estos cuatro meses. Cada día contigo ha hecho mi vida más bonita. Admiro tu forma de ser, tu cariño y la tranquilidad que me das. Espero que esto sea solo el comienzo de una historia llena de recuerdos, risas y sueños compartidos.<br><br>
+Gracias por elegirme. Te quiero muchísimo y deseo seguir celebrando muchos meses más a tu lado.</p>
+<p style="text-align:right;font-size:1.2em">Con amor,<br>Diego 🤍</p>
+</div>
+<script>
+for(let i=0;i<120;i++){let s=document.createElement('div');s.className='star';s.style.left=Math.random()*100+'vw';s.style.top=Math.random()*100+'vh';document.body.appendChild(s);}
+</script></body></html>
